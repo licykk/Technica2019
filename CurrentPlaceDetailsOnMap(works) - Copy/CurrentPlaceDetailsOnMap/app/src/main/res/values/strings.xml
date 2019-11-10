@@ -17,4 +17,13 @@
     <string name="update">Update</string>
     <string name="delete">Delete</string>
     <string name="add">Add</string>
+    <string name="china">China</string>
+    <string name="scotland">Scotland</string>
+    <string name="chose_coun">Choose which country you are planning to visit.</string>
+    <string name="choose_act">Choose which activity you would like to explore.</string>
+    <string name="translate">Translate</string>
+    <string name="phrases">Common Phrases</string>
+    <string name="culture">About the country</string>
+    <string name="another_country">Choose another location</string>
+    <string name="choose_current">Choose current location.</string>
 </resources>

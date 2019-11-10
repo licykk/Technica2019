@@ -13,19 +13,21 @@ public class chose_activity extends AppCompatActivity {
         Intent intent = getIntent();
         String message = intent.getStringExtra(choseCountry.EXTRA_MESSAGE);
     }
-    public void goScotland(View view) {
-        Intent intent = new Intent(this, CulturalTraditions.class);
+    public void goTranslate(View view) {
+        Intent intent = getIntent();
+        String message = intent.getStringExtra(choseCountry.EXTRA_MESSAGE);
+        Intent Intent = new Intent(this, CulturalTraditions.class);
         startActivity(intent);
-        String Message = message;
-        intent.putExtra(EXTRA_MESSAGE, Message);
-        startActivity(intent);
+        intent.putExtra(EXTRA_MESSAGE, message);
+        startActivity(Intent);
     }
-    public void goChina(View view) {
-        Intent intent = new Intent(this, CulturalTraditions.class);
+    public void goCulture(View view) {
+        Intent intent = getIntent();
+        String message = intent.getStringExtra(choseCountry.EXTRA_MESSAGE);
+        Intent Intent = new Intent(this, CulturalTraditions.class);
         startActivity(intent);
-        String Message = message;
-        intent.putExtra(EXTRA_MESSAGE, Message);
-        startActivity(intent);
+        intent.putExtra(EXTRA_MESSAGE, message);
+        startActivity(Intent);
     }
 
 }
