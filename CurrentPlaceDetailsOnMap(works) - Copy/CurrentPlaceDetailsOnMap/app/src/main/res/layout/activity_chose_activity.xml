@@ -6,4 +6,25 @@
     android:layout_height="match_parent"
     tools:context=".chose_activity">
 
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="292dp"
+        android:layout_height="117dp"
+        android:layout_marginBottom="80dp"
+        android:text="Button"
+        app:layout_constraintBottom_toTopOf="@+id/button5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="296dp"
+        android:layout_height="104dp"
+        android:layout_marginBottom="96dp"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent" />
 </android.support.constraint.ConstraintLayout>

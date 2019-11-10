@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+    <link href="Hermes.css" type="text/css" rel="stylesheet" />
+    <script src="Hermes.js"></script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<head>
+    <title>Common Phrases</title>
+</head>
+<body>
+    
+<div class="topnav">
+  <a class="active" href="Hermes.html"><img class="home" src="hermeslogo.png" alt="Home"></a>
+  <a href="Currency.html"><img src="Currency1.png"><br>Currency Converter</a>
+  <a href="Language.html"><img src="language1.png"><br>Common Phrases</a>
+  <a href="Manners.html"><img src="manners1.png"><br>Cultural Customs</a>
+  <a href="Settings.html"><img src="settings1.png"><br>Settings</a>
+  <div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit"><i class="fa fa-search"></i><img src="search1.png"></button>
+    </form>
+  </div>
+</div>
+
+<table class="language">
+  <tr>
+    <th>English</th>
+    <th class="otherLanguage">Spanish</th>
+  </tr>
+  <tr>
+    <td>
+      <ul>
+      <li>Hello</li>
+      <li>How are you</li>
+      <li>My name is</li>
+      <li>Nice to meet you</li>
+      <li>Goodbye</li>
+      <li>Thank you</li>
+      <li>You're welcome</li>
+      <li>No problem</li>
+      <li>Excuse me</li>
+      <li>I'm sorry</li>
+      <li>Where is the bathroom</li>
+      <li>Can you help me please</li>
+    </ul>
+    </td>
+    <div id="otherLang">
+    <td>
+      <ul>
+      <li>Hello</li>
+      <li>How are you</li>
+      <li>My name is</li>
+      <li>Nice to meet you</li>
+      <li>Goodbye</li>
+      <li>Thank you</li>
+      <li>You're welcome</li>
+      <li>No problem</li>
+      <li>Excuse me</li>
+      <li>I'm sorry</li>
+      <li>Where is the bathroom</li>
+      <li>Can you help me please</li>
+    </ul>
+    </td>
+    </div>
+  </tr>
+  
+</table>
+
+<script>
+  google.language.translate(otherLang, "en", "es", function(result){
+    if (!result.error){
+      var container = document.getElementById(otherLang);
+      container.innerHTML = result.translation;
+    }
+  });
+</script>
+</body>
+</html>

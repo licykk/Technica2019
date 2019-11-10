@@ -141,7 +141,7 @@ public class MapsActivityCurrentPlace extends AppCompatActivity
      * Manipulates the map when it's available.
      * This callback is triggered when the map is ready to be used.
      */
-    public class MyApplication extends Application {
+    public class MyApplication {
 
         private String someVariable;
 
@@ -405,6 +405,10 @@ public class MapsActivityCurrentPlace extends AppCompatActivity
     }
     public void goChoseActivity(View view) {
         Intent intent= new Intent(this, chose_activity.class);
+        startActivity(intent);
+    }
+    public void goChoseCountry(View view) {
+        Intent intent= new Intent(this, choseCountry.class);
         startActivity(intent);
     }
 

@@ -13,25 +13,31 @@
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
         tools:context="com.example.currentplacedetailsonmap.MapsActivityCurrentPlace"
-        tools:layout_editor_absoluteX="-79dp" />
+        tools:layout_editor_absoluteX="-36dp" />
 
     <Button
-        android:id="@+id/continue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/continue1"
+        android:layout_width="129dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="32dp"
+        android:onClick="goChoseActivity"
         android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/change_location"
-        tools:layout_editor_absoluteY="539dp" />
+        app:layout_constraintHorizontal_bias="0.602"
+        app:layout_constraintStart_toEndOf="@+id/change_location" />
 
     <Button
         android:id="@+id/change_location"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="84dp"
-        android:layout_marginLeft="84dp"
+        android:layout_width="153dp"
+        android:layout_height="102dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginLeft="44dp"
+        android:layout_marginBottom="32dp"
+        android:onClick="goChoseCountry"
         android:text="Button"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="539dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </android.support.constraint.ConstraintLayout>
