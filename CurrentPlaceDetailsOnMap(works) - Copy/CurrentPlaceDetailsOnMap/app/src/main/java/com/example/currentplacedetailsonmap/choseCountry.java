@@ -19,17 +19,15 @@ public class choseCountry extends AppCompatActivity {
         china = "China";
     }
     public void goScotland(View view) {
-        Intent intent = new Intent(this, chose_activity.class);
-        startActivity(intent);
-        String message = scotland;
-        intent.putExtra(EXTRA_MESSAGE, message);
+        Intent intent = new Intent(this, Choose_Scot.class);
         startActivity(intent);
     }
     public void goChina(View view) {
-        Intent intent = new Intent(this, chose_activity.class);
+        Intent intent = new Intent(this, Choose_chin.class);
         startActivity(intent);
-        String message = china;
-        intent.putExtra(EXTRA_MESSAGE, message);
-        startActivity(intent);
+    }
+    public void goHome(View view) {
+        Intent Intent = new Intent(this, MapsActivityCurrentPlace.class);
+        startActivity(Intent);
     }
 }

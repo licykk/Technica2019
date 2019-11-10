@@ -411,5 +411,9 @@ public class MapsActivityCurrentPlace extends AppCompatActivity
         Intent intent= new Intent(this, choseCountry.class);
         startActivity(intent);
     }
+    public void goHome(View view) {
+        Intent Intent = new Intent(this, MapsActivityCurrentPlace.class);
+        startActivity(Intent);
+    }
 
 }
