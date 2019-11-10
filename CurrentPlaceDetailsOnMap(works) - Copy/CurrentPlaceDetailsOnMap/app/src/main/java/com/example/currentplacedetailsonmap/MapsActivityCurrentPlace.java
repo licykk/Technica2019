@@ -137,6 +137,7 @@ public class MapsActivityCurrentPlace extends AppCompatActivity
         }
         return true;
     }
+    public void setMapToolbarEnabled (boolean enabled)
 
     /**
      * Manipulates the map when it's available.
