@@ -1,6 +1,7 @@
 package com.example.currentplacedetailsonmap;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Bundle;
@@ -44,6 +45,7 @@ public class MapsActivityCurrentPlace extends AppCompatActivity
     private GoogleMap mMap;
     private CameraPosition mCameraPosition;
 
+
     // The entry points to the Places API.
     private GeoDataClient mGeoDataClient;
     private PlaceDetectionClient mPlaceDetectionClient;
@@ -57,7 +59,7 @@ public class MapsActivityCurrentPlace extends AppCompatActivity
     private static final int DEFAULT_ZOOM = 15;
     private static final int PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION = 1;
     private boolean mLocationPermissionGranted;
-
+    final MyApplication SomeVariable = (MyApplication) get
     // The geographical location where the device is currently located. That is, the last-known
     // location retrieved by the Fused Location Provider.
     private Location mLastKnownLocation;
@@ -76,8 +78,7 @@ public class MapsActivityCurrentPlace extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        // Retrieve location and camera position from saved instance state.
+        Intent intent = getIntent();        // Retrieve location and camera position from saved instance state.
         if (savedInstanceState != null) {
             mLastKnownLocation = savedInstanceState.getParcelable(KEY_LOCATION);
             mCameraPosition = savedInstanceState.getParcelable(KEY_CAMERA_POSITION);
@@ -101,7 +102,6 @@ public class MapsActivityCurrentPlace extends AppCompatActivity
         mapFragment.getMapAsync(this);
 
     }
-
     /**
      * Saves the state of the map when the activity is paused.
      */
@@ -142,6 +142,18 @@ public class MapsActivityCurrentPlace extends AppCompatActivity
      * Manipulates the map when it's available.
      * This callback is triggered when the map is ready to be used.
      */
+    public class MyApplication extends Application {
+
+        private String someVariable;
+
+        public String getSomeVariable() {
+            return someVariable;
+        }
+
+        public void setSomeVariable(String someVariable) {
+            this.someVariable = someVariable;
+        }
+    }
     @Override
     public void onMapReady(GoogleMap map) {
         mMap = map;
@@ -392,4 +404,9 @@ public class MapsActivityCurrentPlace extends AppCompatActivity
             Log.e("Exception: %s", e.getMessage());
         }
     }
+    public void goChoseActivity(View view) {
+        Intent intent= new Intent(this, chose_activity.class);
+        startActivity(intent);
+    }
+
 }
