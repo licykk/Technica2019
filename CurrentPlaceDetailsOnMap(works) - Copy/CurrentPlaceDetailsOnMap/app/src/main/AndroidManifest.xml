@@ -12,7 +12,12 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Pick_a_country"></activity>
+        <activity android:name=".Choose_chin"></activity>
+        <activity android:name=".Choose_Scot" />
+        <activity android:name=".Culture_China" />
+        <activity android:name=".Culture_Scotland" />
+        <activity android:name=".Translations_China" />
+        <activity android:name=".Translations_Scotland" />
         <activity android:name=".TranslateActivity" />
         <activity android:name=".choseCountry" />
         <activity android:name=".chose_activity" />

@@ -1,7 +1,9 @@
 package com.example.currentplacedetailsonmap;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 import java.util.HashMap;
@@ -29,7 +31,7 @@ public class CulturalTraditions extends AppCompatActivity {
         setContentView(R.layout.activity_cultural_traditions);
 
         //DISCARD VARIABLE, REPLACE WITH REAL ONE
-        String country_name = "China";
+        String country_name = "United States";
 
         //REAL VARIABLES, DON'T DISCARD
         final String COUNTRY_NAME_ID = "country_name";
@@ -58,6 +60,11 @@ public class CulturalTraditions extends AppCompatActivity {
 
         TextView tex = (TextView) findViewById(R.id.textView);
         tex.setText(languages);
+        TextView textView = findViewById(R.id.Traditions);
+        textView.setText(general_culture);
+    }public void goHome(View view) {
+        Intent Intent = new Intent(this, MapsActivityCurrentPlace.class);
+        startActivity(Intent);
     }
 
 }
