@@ -13,7 +13,7 @@
     tools:context="com.example.currentplacedetailsonmap.MapsActivityCurrentPlace" />
 
     <Button
-        android:id="@+id/continue"
+        android:id="@+id/continue1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Button"

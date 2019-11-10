@@ -2,6 +2,7 @@ package com.example.currentplacedetailsonmap;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.TextView;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -9,6 +10,7 @@ import com.example.sqlconnection.helper.HttpJsonParser;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+import android.widget.TextView;
 
 
 
@@ -19,6 +21,7 @@ public class CulturalTraditions extends AppCompatActivity {
     private String restaurants;
     private String religion;
     private String memorials;
+    TextView gencult;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +29,7 @@ public class CulturalTraditions extends AppCompatActivity {
         setContentView(R.layout.activity_cultural_traditions);
 
         //DISCARD VARIABLE, REPLACE WITH REAL ONE
-        String country_name = "United States of America";
+        String country_name = "China";
 
         //REAL VARIABLES, DON'T DISCARD
         final String COUNTRY_NAME_ID = "country_name";
@@ -35,6 +38,7 @@ public class CulturalTraditions extends AppCompatActivity {
         Map<String, String> httpParams = new HashMap<>();
         httpParams.put(COUNTRY_NAME_ID, country_name);
 
+        //Grabs stuff from db
         JSONObject jsonObject = httpJsonParser.makeHttpRequest("http://localhost:8888/cultural/" + "get_movie_details.php", "GET", httpParams);
         try {
             int success = jsonObject.getInt("success");
@@ -51,6 +55,9 @@ public class CulturalTraditions extends AppCompatActivity {
         } catch (JSONException e) {
             e.printStackTrace();
         }
+
+        TextView tex = (TextView) findViewById(R.id.textView);
+        tex.setText(languages);
     }
 
 }
